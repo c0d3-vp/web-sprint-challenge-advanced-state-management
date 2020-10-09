@@ -7,7 +7,7 @@ import Footer from './Footer'
 function App(){
   return (
     <div className="App">
-      <h1>SMURFS!</h1>
+      <h1>SMURFS</h1>
       <h2>WITH REDUX</h2>
       <SmurfForm />
       <br />
