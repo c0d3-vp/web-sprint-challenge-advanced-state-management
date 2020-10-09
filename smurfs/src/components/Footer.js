@@ -1,0 +1,14 @@
+import React from 'react'
+
+function Footer() {
+    return (
+        <footer>
+            <br/>
+            <p> Designed by: Virginia Scirrotto™</p>
+            <p>All Rights Reserved © 2020</p>
+            <br/>
+        </footer>    
+    )
+}
+
+export default Footer
