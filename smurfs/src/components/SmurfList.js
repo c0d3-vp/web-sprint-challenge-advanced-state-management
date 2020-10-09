@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
-import {fetchSmurfs} from '../actions'
+import {fetchSmurfs, postSmurfs} from '../actions'
 
 const mapStateToProps = (state) => {
     return {
@@ -13,8 +13,13 @@ const mapStateToProps = (state) => {
 function SmurfList(props){
     useEffect(()=>{
         props.fetchSmurfs()
+        
     }, [])
 
+    useEffect(()=>{
+        props.postSmurfs()
+        
+    }, [])
     return(
         <div>
         {console.log(props.smurfs)}
@@ -22,4 +27,4 @@ function SmurfList(props){
     )
 }
 
-export default connect(mapStateToProps, {fetchSmurfs})(SmurfList)
+export default connect(mapStateToProps, {fetchSmurfs, postSmurfs})(SmurfList)

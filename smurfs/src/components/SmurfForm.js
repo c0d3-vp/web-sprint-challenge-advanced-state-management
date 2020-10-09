@@ -27,15 +27,15 @@ function SmurfForm(props) {
 
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     props.postSmurfs(smurf);
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor='name'>
         Name:{' '}
-        <input value = {smurf.name} type='text' name='name' id='age' onChange={handleChange} />
+        <input value = {smurf.name} type='text' name='name' id='name' onChange={handleChange} />
       </label>
       <label htmlFor='age'>
         {' '}
@@ -44,12 +44,12 @@ function SmurfForm(props) {
       <label htmlFor='height'>
         {' '}
         Height:{' '}
-        <input value = {smurf.height} type='text' name='height' id='age' onChange={handleChange} />
+        <input value = {smurf.height} type='text' name='height' id='height' onChange={handleChange} />
       </label>
       <br />
       <br />
       <br />
-      <button onSubmit={handleSubmit}>Add Smurf</button>
+      <button >Add Smurf</button>
     </form>
   );
 }
